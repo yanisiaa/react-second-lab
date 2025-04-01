@@ -1,19 +1,18 @@
-import React from 'react';
-import Card from '../Card/Card';
-import './Main.css';
+import React from "react";
+import { Container, Grid } from "@mui/material";
+import CustomCard from "../Card/Card";
 
 function Main({ cards }) {
     return (
-        <div className="main">
-            {cards.map((card) => (
-                <Card
-                    key={card.id}
-                    title={card.title}
-                    description={card.description}
-                    image={card.image}
-                />
-            ))}
-        </div>
+        <Container sx={{ backgroundColor: "#fff4fb", py: 3 }}>
+            <Grid container spacing={2} justifyContent="center">
+                {cards.map((card) => (
+                    <Grid item key={card.id}>
+                        <CustomCard {...card} />
+                    </Grid>
+                ))}
+            </Grid>
+        </Container>
     );
 }
 

@@ -1,13 +1,16 @@
-import React from 'react';
-import Main from './components/Main/Main';
-import { cardsData } from './data'; 
-import './App.css'; 
+import React from "react";
+import { Typography, Container } from "@mui/material";
+import Main from "./components/Main/Main";
+import { cardsData } from "./data"; 
+
 function App() {
     return (
-        <div>
-            <h1 className="app-title">Моя колекція карток</h1>
+        <Container>
+            <Typography variant="h4" textAlign="center" color="#b65fcf" marginY={3}>
+                Моя колекція карток
+            </Typography>
             <Main cards={cardsData} />
-        </div>
+        </Container>
     );
 }
 
